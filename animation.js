@@ -112,8 +112,7 @@ function highlightGenderDistribution() {
         .attr("x", mt - 8) // Adjust the x-position for Male text
         .attr("y", ml - 35) // Adjust the y-position near Male dots
         .text(`Male: ${maleCount}`)
-        .attr("font-size", "9px") // Adjust text size
-        .attr("font-weight", "bold")
+        .attr("font-size", "10px") // Adjust text size
         .attr("fill", "black") // Match Male dot color
         .attr("text-anchor", "end"); // Align text to the right (near the dots)
 
@@ -123,9 +122,8 @@ function highlightGenderDistribution() {
         .attr("x", mt - 8) // Adjust the x-position for Female text
         .attr("y", ml + 150) // Adjust the y-position near Female dots
         .text(`Female: ${femaleCount}`)
-        .attr("font-size", "9px") // Adjust text size
+        .attr("font-size", "10px") // Adjust text size
         .attr("fill", "black") // Match Female dot color
-        .attr("font-weight", "bold")
         .attr("text-anchor", "end"); // Align text to the right (near the dots)
 
     // Select the first 720 dots (Male)

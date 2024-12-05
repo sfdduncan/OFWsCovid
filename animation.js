@@ -156,6 +156,7 @@ function ageRange2020() {
     ]
 
     svg.selectAll(".gender-label").remove();
+    svg.selectAll(".dots-label").remove();
 
     const dotsPerRow = 10; // Number of dots per row
     const dotRadius = grid / 8; // Radius of each dot

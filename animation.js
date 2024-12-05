@@ -112,7 +112,7 @@ function highlightGenderDistribution() {
         .attr("x", mt - 8) // Adjust the x-position for Male text
         .attr("y", ml - 35) // Adjust the y-position near Male dots
         .text(`Male: ${maleCount}`)
-        .attr("font-size", "10px") // Adjust text size
+        .attr("font-size", "9px") // Adjust text size
         .attr("font-weight", "bold")
         .attr("fill", "black") // Match Male dot color
         .attr("text-anchor", "end"); // Align text to the right (near the dots)
@@ -123,7 +123,7 @@ function highlightGenderDistribution() {
         .attr("x", mt - 8) // Adjust the x-position for Female text
         .attr("y", ml + 150) // Adjust the y-position near Female dots
         .text(`Female: ${femaleCount}`)
-        .attr("font-size", "10px") // Adjust text size
+        .attr("font-size", "9px") // Adjust text size
         .attr("fill", "black") // Match Female dot color
         .attr("font-weight", "bold")
         .attr("text-anchor", "end"); // Align text to the right (near the dots)
@@ -214,7 +214,6 @@ function ageRange2020() {
             .attr("y", baselineY + 275) // Below the baseline
             .attr("text-anchor", "middle")
             .attr("fill", "black")
-            .attr("font-weight", "bold")
             .attr("font-size", "12px")
             .text(group.ageRange);
 
@@ -225,6 +224,7 @@ function ageRange2020() {
             .attr("y", baselineY - Math.ceil(group.dots / dotsPerRow) * verticalSpacing +250) // Slightly above the bar
             .attr("text-anchor", "middle")
             .attr("fill", "black")
+            .attr("font-weight", "bold")
             .attr("font-size", "12px")
             .text(group.dots);
 

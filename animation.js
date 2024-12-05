@@ -46,6 +46,7 @@ function setup(totalDots) {
     .attr("x", mt - 5) // Adjust the x-position relative to your margin
     .attr("y", ml - 110) // Adjust the y-position slightly above the dots
     .text("1 dot = 1,000 people")
+    .attr("font-weight", "bold")
     .attr("font-size", "16px") // Adjust text size
     .attr("fill", "black") // Text color
     .attr("text-anchor", "start"); // Align text to the start (left-aligned)
@@ -112,6 +113,7 @@ function highlightGenderDistribution() {
         .attr("y", ml - 35) // Adjust the y-position near Male dots
         .text(`Male: ${maleCount}`)
         .attr("font-size", "10px") // Adjust text size
+        .attr("font-weight", "bold")
         .attr("fill", "black") // Match Male dot color
         .attr("text-anchor", "end"); // Align text to the right (near the dots)
 
@@ -123,6 +125,7 @@ function highlightGenderDistribution() {
         .text(`Female: ${femaleCount}`)
         .attr("font-size", "10px") // Adjust text size
         .attr("fill", "black") // Match Female dot color
+        .attr("font-weight", "bold")
         .attr("text-anchor", "end"); // Align text to the right (near the dots)
 
     // Select the first 720 dots (Male)
@@ -211,6 +214,7 @@ function ageRange2020() {
             .attr("y", baselineY + 275) // Below the baseline
             .attr("text-anchor", "middle")
             .attr("fill", "black")
+            .attr("font-weight", "bold")
             .attr("font-size", "12px")
             .text(group.ageRange);
 

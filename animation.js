@@ -358,7 +358,7 @@ var render = function () {
     if (scrollTop !== newScrollTop) {
         scrollTop = newScrollTop;
         var panelSize = window.innerHeight;
-        var panelNumber = Math.round(scrollTop / panelSize);
+        var panelNumber = Math.floor(scrollTop / panelSize);
         if (panel !== panelNumber && panels[panelNumber]) {
             console.log(`Switching to panel ${panelNumber}`);
             panel = panelNumber;

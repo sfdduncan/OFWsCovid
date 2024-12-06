@@ -289,8 +289,8 @@ function jobType() {
         groupDots
             .transition()
             .duration(1000)
-            .attr("cx", (d, j) => currentColumnX + (j % dotsPerRow) * horizontalSpacing) // Position horizontally within the row
-            .attr("cy", (d, j) => currentY + Math.floor(j / dotsPerRow) * verticalSpacing) // Stack rows vertically
+            .attr("cx", (d, j) => currentColumnX + (j % dotsPerRow) * horizontalSpacing - 5) // Position horizontally within the row
+            .attr("cy", (d, j) => currentY + Math.floor(j / dotsPerRow) * verticalSpacing - 30) // Stack rows vertically
             .attr("r", dotRadius) // Adjust dot radius
             .attr("fill", "white") // White fill for dots
             .attr("stroke", "black"); // Black outline for dots

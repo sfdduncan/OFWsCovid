@@ -199,7 +199,7 @@ function ageRange2020() {
             .transition()
             .duration(1000)
             .attr("cx", (d, j) => currentX + (j % dotsPerRow) * horizontalSpacing - 10) // Position horizontally within the row
-            .attr("cy", (d, j) => baselineY - Math.floor(j / dotsPerRow) * verticalSpacing - 100) // Stack rows vertically
+            .attr("cy", (d, j) => baselineY - Math.floor(j / dotsPerRow) * verticalSpacing - 85) // Stack rows vertically
             .attr("r", dotRadius) // Adjust dot radius
             .attr("fill", "#F2F2F2")
             .attr("stroke", "black")
@@ -290,7 +290,7 @@ function jobType() {
             .transition()
             .duration(1000)
             .attr("cx", (d, j) => currentColumnX + (j % dotsPerRow) * horizontalSpacing - 15) // Position horizontally within the row
-            .attr("cy", (d, j) => currentY + Math.floor(j / dotsPerRow) * verticalSpacing - 100) // Stack rows vertically
+            .attr("cy", (d, j) => currentY + Math.floor(j / dotsPerRow) * verticalSpacing - 85) // Stack rows vertically
             .attr("r", dotRadius) // Adjust dot radius
             .attr("fill", "white") // White fill for dots
             .attr("stroke", "black"); // Black outline for dots

@@ -7,7 +7,7 @@ var translate = 'translate(' + (WIDTH / 2) + ',' + (HEIGHT / 2) + ')';
 
 // Create an SVG element inside the #sticky element
 var svg = d3.select("#sticky").append("svg")
-    .attr('width', WIDTH)
+    .attr('width', WIDTH + 50)
     .attr('height', HEIGHT)
     .attr("viewBox", `0 0 ${WIDTH} ${HEIGHT}`)
     .attr("preserveAspectRatio", "xMidYMid meet"); // Ensures content scales and centers
@@ -133,15 +133,15 @@ function highlightGenderDistribution() {
         .transition() // First transition: Change color
         .duration(1000)
         .attr("fill", "#497309") // Set color to slight orange for Male
-        .attr("fill-opacity", 0.8) // Slight transparency
+        .attr("fill-opacity", 0.4) // Slight transparency
 
     // Transform female dots
     d3.selectAll(".dot")
         .filter((d, i) => i >= maleCount && i < maleCount + femaleCount) // Next 1,060 dots are Female
         .transition() // First transition: Change color
         .duration(1000)
-        .attr("fill", "#CED176") // Set color to light green for Female
-        .attr("fill-opacity", 0.8) // Slight transparency
+        .attr("fill", "#C11C84") // Set color to light green for Female
+        .attr("fill-opacity", 0.4) // Slight transparency
 
 }
 

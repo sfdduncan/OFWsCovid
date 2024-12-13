@@ -8,8 +8,6 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <title>Clean Interactive Webpage</title>
   <style>
-/* General Page Styles */
-
 
 #hover-popup {
   display: none;
@@ -79,10 +77,9 @@ iframe {
 
 /* Scrollytelling Section Styles */
 
-#container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
 #container::-webkit-scrollbar {
@@ -112,17 +109,19 @@ iframe {
     #container {
       position: relative;
       z-index: 100;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
     #sticky { 
       position: absolute; 
-      top: 0; 
       right: 0; 
       width: 50%; 
       z-index: 50;
     }
+
+
     .panel {
-      width: 100%;
-      padding-top: 35vh;
+      padding-bottom: 50vh;
     }
     .panel p {
       padding-right: 50%;
@@ -405,8 +404,7 @@ img {
   </div>
 </section>
 <!-- This is the scrollytelling section-->
-<section id="scrollytelling">
-  <div id="scrollytelling-container">
+<section id="scrollytelling" style="display: flex; margin-top: 20vh; margin-bottom: 20vh; margin-left: 2vw;">
       <div id="sticky"></div>
       <div id="container" style="height: 100vh; overflow: scroll">
           <div id="content">
@@ -509,7 +507,7 @@ img {
             duration: 1,
             scrollTrigger: {
               trigger: section,
-              start: "top 80%",
+              start: "top 50%",
               end: "bottom 50%",
               toggleActions: "play none none reverse",
             },
@@ -527,7 +525,7 @@ img {
           duration: 1.5,
           scrollTrigger: {
             trigger: "#scrollytelling-container",
-            start: "top 80%",
+            start: "top 50%",
             end: "bottom 50%",
             scrub: true,
             pin: "#scrollytelling-container",

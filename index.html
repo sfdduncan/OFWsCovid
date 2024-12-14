@@ -341,7 +341,7 @@ img {
                         <tspan class="cls-1">2022</tspan>
                       </textPath>
                     </text>
-                    <text transform="translate(-300,120)">
+                    <text transform="translate(-305,110)">
                       <textPath startOffset="70%" xlink:href="#path-2">
                         <tspan class="cls-1">2021</tspan>
                       </textPath>
@@ -600,11 +600,11 @@ img {
 <script>
   const data = {
     children: [
-      { id: "2", name: "2020", petals: ["Estimated OFW abroad: 1.77 million"], cash: ["Cash Remittances: 2.3 billion US Dollars"], popupColor: "white" },
-      { id: "1", name: "2019", petals: ["Estimated OFW abroad: 2.2 million"], cash: ["Cash Remittances: 3.7 billion US Dollars"], popupColor: "white" },
-      { id: "3", name: "2021", petals: ["Estimated OFW abroad: 1.83 million"], cash: ["Cash Remittances: 2.6 billion US dollars"], popupColor: "white" },
-      { id: "4", name: "2022", petals: ["Estimated OFW abroad: 1.96 million"], cash: ["Cash Remittances: 3.4 billion US dollars"], popupColor: "white" },
-      { id: "5", name: "2023", petals: ["Estimated OFW abroad: 2.16 million"], cash: ["Cash Remittances: 4.2 billion US dollars"], popupColor: "white" },
+      { id: "2", name: "2020", totalOFWs: ["Estimated OFW abroad: 1.77 million"],  contractWorker: "1.71 million", cash: ["Cash Remittances: 2.3 billion US Dollars"], topDestination: "Asia (83.6%), led by Saudi Arabia (26.6%)", topOccupation: "Elementary Occupations (70.3%)", popupColor: "white" },
+      { id: "1", name: "2019", totalOFWs: ["Estimated OFW abroad: 2.2 million"], contractWorker: "2.1 million", cash: ["Cash Remittances: 3.7 billion US Dollars"], topDestination: "Asia (81.1%), led by Saudi Arabia (22.4%)", topOccupation: "Elementary Occupations (39.6%)", popupColor: "white" },
+      { id: "3", name: "2021", totalOFWs: ["Estimated OFW abroad: 1.83 million"], contractWorker:"1.76 million", topDestination: "Asia (78.3%), led by Saudi Arabia (24.4%)", topOccupation: "Elementary Occupations (64.8%)", cash: ["Cash Remittances: 2.6 billion US dollars"], popupColor: "white" },
+      { id: "4", name: "2022", totalOFWs: ["Estimated OFW abroad: 1.96 million"], cash: ["Cash Remittances: 3.4 billion US dollars"], topDestination: "Asia (80%), led by Saudi Arabia (23%)", topOccupation: "Elementary Occupations (44.4%)", popupColor: "white" },
+      { id: "5", name: "2023", totalOFWs: ["Estimated OFW abroad: 2.16 million"], cash: ["Cash Remittances: 4.2 billion US dollars"], topDestination: "Asia (77.4%), led by Saudi Arabia (20%)", topOccupation: "Elementary Occupations (41.1%)", popupColor: "white" },
     ],
   };
 
@@ -623,7 +623,7 @@ img {
         hoverPopup.style.left = `${event.pageX + 10}px`;
         hoverPopup.style.top = `${event.pageY + 10}px`;
         hoverPopup.style.backgroundColor = flowerData.popupColor;
-        hoverPopup.innerHTML = `Year: ${flowerData.name} <br> ${flowerData.petals} <br> ${flowerData.cash}`;
+        hoverPopup.innerHTML = `${flowerData.totalOFWs} <br> ${flowerData.cash} <br> Top Destination:  ${flowerData.topDestination} <br> Top Occupation: ${flowerData.topOccupation}`;
       }
     });
 

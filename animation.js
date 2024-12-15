@@ -314,6 +314,10 @@ function jobType() {
         currentColumnDots += group.count; // Add the group's dot count
     });
 }
+
+
+
+
 var panels = [
     () => {
         setup(2200); // Initial setup with 2,200 dots
@@ -325,10 +329,10 @@ var panels = [
 
     () => {
         highlightGenderDistribution(); // Highlight gender distribution in the third section
+
     },
 
     () => { 
-
         ageRange2020(); 
     }, 
     () => {
